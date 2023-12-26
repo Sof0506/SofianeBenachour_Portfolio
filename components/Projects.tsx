@@ -20,7 +20,7 @@ export default function Projects({projects}: Props) {
      <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]'>
        {/*Projects */}
        {projects?.map((project,i)=>(
-        <div key={project._id} className='w-screen flex-shrink-0 snap-center md:flex-col 
+        <div key={project.title} className='w-screen flex-shrink-0 snap-center md:flex-col 
         space-y-5 items-center p-28 justify-center  md:p-44 h-screen'>
             <motion.img
             initial={{y:-300,opacity:0}}
@@ -44,7 +44,7 @@ export default function Projects({projects}: Props) {
                 <div className='flex items-center space-x-2 justify-center'>
                 {project?.technologies.map((tech)=>(
                    <Image
-    key={tech._id}
+    key={tech.title}
     className='h-12 w-12 cursor-pointer'
     src={urlFor(tech.image).url()}
     alt="LOGO"
