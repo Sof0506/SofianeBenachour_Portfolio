@@ -3,6 +3,8 @@ import {motion} from "framer-motion"
 import { Project } from '../typings'
 import { urlFor } from '../sanity';
 import Link from 'next/link';
+import Image from 'next/image';
+
 type Props = {
   projects:Project[];
 }
@@ -41,12 +43,14 @@ export default function Projects({projects}: Props) {
                 </h4>
                 <div className='flex items-center space-x-2 justify-center'>
                 {project?.technologies.map((tech)=>(
-                  <img 
-                  key={tech._id}
-                  className='h-12 w-12 cursor-pointer'
-                  src={urlFor(tech.image).url()} alt="Tech Pic"
-                    alt="LOGO"
-                    />
+                   <Image
+    key={tech._id}
+    className='h-12 w-12 cursor-pointer'
+    src={urlFor(tech.image).url()}
+    alt="LOGO"
+    width={48}
+    height={48}
+  />
                 ))}
                
                   </div>
