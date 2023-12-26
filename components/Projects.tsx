@@ -26,7 +26,9 @@ export default function Projects({projects}: Props) {
             whileInView={{opacity:1,y:0}}
             viewport={{once:true}}
             className='h-16 w-16 mt-20 mx-auto'
-            src={urlFor(project.image).url()} />
+            src={urlFor(project.image).url()} 
+              alt="Project Title"
+              />
         <div className='space-y-10 px-0 md:px-10 mx-auto '>
             <h4 className='text-xs md:text-xl lg:text-2xl font-semibold
              text-center'>
