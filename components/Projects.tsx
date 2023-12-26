@@ -42,7 +42,9 @@ export default function Projects({projects}: Props) {
                   <img 
                   key={tech._id}
                   className='h-12 w-12 cursor-pointer'
-                  src={urlFor(tech.image).url()} alt="Tech Pic" />
+                  src={urlFor(tech.image).url()} alt="Tech Pic"
+                    alt="LOGO"
+                    />
                 ))}
                
                   </div>
